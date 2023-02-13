@@ -1,49 +1,19 @@
 /*
-Condições 
+instruções(laços de repetição)
 
-if = se
-else = se não 
-else if se não se 
+for = (valor inicial;valor final; incremento)
+foreach = usado para executar diferentes funções ara cada indice do array
+forin = percorre os atributos de objetos
 
-switch = estrutura de controle com instruções pré definidas 
+Para sair de um for é necessario o comando break dentro de um If
 
-
-If e else
-
-let cor = "amarelo";
-
-if(cor === "verde")
-{
-    console.log('siga');
-}
-
-else if(cor === "amarelo") 
-{
-console.log('atenção')
-}
-
-else 
-{
-console.log('pare')
-}
-
+while
+dowhile
 */
 
-//Switch
+let n = 5;
 
-let cor = "vermelho";
-
-switch (cor)
+for(let i = 0; i <= 10; i++)
 {
-case "verde":
-console.log("siga");
-break;
-
-case "amarelo":
-console.log("atenção");
-break;
-
-case "vermelho":
-console.log("pare");
-break;
+    console.log(`${i} x ${n} = ${i*n}`);2
 }
