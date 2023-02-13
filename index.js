@@ -6,12 +6,13 @@ função anonima
 
 parametros ou argumentos, são variavel com definição prévia na função, elas vão receber os valores
 
+eval = avalia uma string e retorna um valor 
 */
-function somar(n1 ,n2)
+function calc(n1 ,n2 , operator)
 {
-return n1 + n2;
+return eval(`${n1} ${operator} ${n2}`);
 }
 
-let resultado = somar(1,2);
+let resultado = calc(1,2 , "+");
 
 console.log(resultado)
