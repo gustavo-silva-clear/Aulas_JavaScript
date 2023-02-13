@@ -1,19 +1,17 @@
 /*
-instruções(laços de repetição)
+Funções = executa uma instrução e retorna algo
 
-for = (valor inicial;valor final; incremento)
-foreach = usado para executar diferentes funções ara cada indice do array
-forin = percorre os atributos de objetos
+função 
+função anonima
 
-Para sair de um for é necessario o comando break dentro de um If
+parametros ou argumentos, são variavel com definição prévia na função, elas vão receber os valores
 
-while
-dowhile
 */
-
-let n = 5;
-
-for(let i = 0; i <= 10; i++)
+function somar(n1 ,n2)
 {
-    console.log(`${i} x ${n} = ${i*n}`);2
+return n1 + n2;
 }
+
+let resultado = somar(1,2);
+
+console.log(resultado)
