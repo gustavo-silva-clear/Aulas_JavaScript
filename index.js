@@ -1,13 +1,49 @@
 /*
-Operadores logicos
+Condições 
 
-and e or 
+if = se
+else = se não 
+else if se não se 
 
-&&  e ||  
+switch = estrutura de controle com instruções pré definidas 
+
+
+If e else
+
+let cor = "amarelo";
+
+if(cor === "verde")
+{
+    console.log('siga');
+}
+
+else if(cor === "amarelo") 
+{
+console.log('atenção')
+}
+
+else 
+{
+console.log('pare')
+}
 
 */
-let a = 10; 
-const b = "10";
 
-console.log(a == b && typeof a == 'string');
-console.log(a == b || typeof a == 'string');2
+//Switch
+
+let cor = "vermelho";
+
+switch (cor)
+{
+case "verde":
+console.log("siga");
+break;
+
+case "amarelo":
+console.log("atenção");
+break;
+
+case "vermelho":
+console.log("pare");
+break;
+}
