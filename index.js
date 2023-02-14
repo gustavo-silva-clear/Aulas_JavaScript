@@ -1,15 +1,45 @@
-/* trabalhando com arrays */
+/* Orientação a objeto e funções de uma forma mais limpa 
+ O que é orientação a objeto, é baseado em uma classe com atributos e motodos, o metodo tem que executar algo, e pra isso é utilizado o termo "this" 
 
-let cars = ["Supra" , "GTR" , "RX-7" , new Date(), function(){}];
+*/
+/*______________________Forma antiga de se declarar uma classe_______________________________________
+//isso é um metodo
+let celular =  function(){
 
-console.log(cars);//Mostra todo o conteudo do array
-console.log(cars.length);//mostra a quantidade de indices
-console.log(cars [2]);//mostra um indice especifico
-console.log(cars[3].getFullYear());//extrai o ano de dentro de uma função que está no indice 
-console.log(cars[4]());//chamo uma função que está em um indice
+    this.cor = "prata";//isso é um atributo
+    
+    this.ligar = function(){
 
-cars.forEach(function(value , index){
+        console.log("uma ligação!");
+        return "ligando...";
 
- console.log(index , value);
+    }
 
-})//forEach serve para percorrer o array ele mostra todos os items que compoem o array
+}
+
+let objeto = new celular();
+
+console.log(objeto);
+console.log(objeto.cor);
+console.log(objeto.ligar());
+_______________________________________________________________________________________________________*/
+
+//_____________________Nova forma de declarar uma classe_________________________________________________
+
+class celular {
+
+    constructor()
+{
+        this.cor = "prata";
+}
+ligar(){
+    console.log("uma ligação!");
+    return "ligando...";
+} 
+
+}
+
+let objeto =  new celular();
+
+console.log(objeto);
+console.log(objeto.ligar());
