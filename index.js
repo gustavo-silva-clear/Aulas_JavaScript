@@ -1,9 +1,10 @@
-window.addEventListener('focus', event =>{
+/* Trabalhando manipulação de data em diferentes formatos */
 
-    console.log("focus");
-})
+let now  = new Date();
+console.log(now);//mostra a data em segundos desde 1970
 
-document.addEventListener('click', event =>{
+console.log(now.getDate());//mostra o dia 
+console.log(now.getFullYear());// mostra o ano
+console.log(now.getMonth());//mostra o mês
 
-    console.log('click');
-})
+console.log(now.toLocaleDateString("pt-br"));// mostra a data de acordo com cada local do mundo basta especificar
