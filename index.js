@@ -1,18 +1,9 @@
-/*
-Funções = executa uma instrução e retorna algo
+window.addEventListener('focus', event =>{
 
-função 
-função anonima
+    console.log("focus");
+})
 
-parametros ou argumentos, são variavel com definição prévia na função, elas vão receber os valores
+document.addEventListener('click', event =>{
 
-eval = avalia uma string e retorna um valor 
-*/
-function calc(n1 ,n2 , operator)
-{
-return eval(`${n1} ${operator} ${n2}`);
-}
-
-let resultado = calc(1,2 , "+");
-
-console.log(resultado)
+    console.log('click');
+})
