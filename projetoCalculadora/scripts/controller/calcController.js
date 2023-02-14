@@ -1,46 +1,83 @@
+//puxa do HTML os id's e define todos os atributos em que serão modificadas as informações e mostradas ao usuario
 class CalcController {
 
-constructor()
-{
-    this._displayCalc = "0";
-    this._currentDate;
-    this.initialize();
+    constructor() {
+        this._locale = 'pt-BR'
+        this._displayCalcEl = document.querySelector("#display");
+        this._dateEl = document.querySelector("#data");
+        this._timeEl = document.querySelector("#hora");
+        this._currentDate;
+        this.initialize();
 
 
-} 
+ 
+    }
 
-initialize(){
+    initialize() {
 
-let displayCalcEl = document.querySelector("#display");
-let dateEl = document.querySelector("#data");
-let timeEl = document.querySelector("#hora");
+        this.setDisplayDateTime();
 
-displayCalcEl.innerHTML = "12213232";
-dateEl.innerHTML = "14/02/2023";
-timeEl.innerHTML = "11:30";
+        setInterval(() => {
 
+            this.setDisplayDateTime();
+
+        }, 1000);// atualiza a hora a cada 1000 milisegundos
+
+
+    }
+// metodo pra definir todos os parametros de data e hora
+
+    setDisplayDateTime() {
+
+        this.displayDate = this.currentDate.toLocaleDateString(this._locale,{
+
+            day:"2-digit",
+            month:"short",
+            year:"numeric"
+
+        });
+        this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
+
+    }
+
+    get displayTime() {
+
+        return this._timeEl.innerHTML;
+
+    }
+
+    set displayTime(value) {
+
+        return this._timeEl.innerHTML = value;
+
+    }
+
+    get displayDate() {
+
+        return this._dateEl.innerHTML;
+    }
+
+    set displayDate(value) {
+
+        return this._dateEl.innerHTML = value;
+    }
+
+    get displayCalc() {
+
+        return this._displayCalcEl.innerHTML;
+    }
+
+    set displayCalc(value) {
+        this._displayCalcEl.innerHTML = value;
+    }
+
+    get currentDate() {
+        return new Date();
+    }
+
+    set currentDate(value) {
+        this._currentDate = value;
+
+    }
 }
 
-get displayCalc(){
-
-    return this._displayCalc;
-}
-
-get currentDate(){
-    return this._currentDate;
-}
-
-
-set displayCalc(value){
-    this._displayCalc = value;    
-}
-
-set displayCalc(value){
-    this._currentDate = value;
-
-}
-}
-
-//classe = conjunto de atributos e metodos
-//encapsulamento = controla o acesso a um atributo ou um metodo
-// getters e setters permitem definir como acessar os valores
